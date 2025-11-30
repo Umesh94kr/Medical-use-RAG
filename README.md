@@ -29,6 +29,11 @@ Ensure you have Ollama installed and the model downloaded:
    cd Medical-use-RAG
    ```
 
+2. Create a .env file, and add your huggingface token to that
+    bash```
+    HF_TOKEN="your_hf_token"
+    ```
+
 2. **Create a virtual environment**
     ```bash
     python3 -m venv myenv
