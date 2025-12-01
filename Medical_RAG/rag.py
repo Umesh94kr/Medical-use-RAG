@@ -8,7 +8,9 @@ class RAG:
         self.history = []
 
     # Retrieve relevant docs
-    def get_relevant_docs(self, query, k=3):
+    def get_relevant_docs(self, query, k=3, mock=False):
+        if mock:
+            return "This is a mock Context."
         docs = self.vectorstore.similarity_search(query, k=k)
         context = "\n\n".join([f"[Doc {i+1}]\n{d.page_content}" for i, d in enumerate(docs)])
         return context
@@ -36,7 +38,9 @@ class RAG:
         return messages
 
     # LLM call
-    def call_llm(self, messages):
+    def call_llm(self, messages, mock=False):
+        if mock:
+            return "You are working correctly!"
         response = ollama.chat(
             model='llama3.2',
             messages=messages
@@ -44,11 +48,11 @@ class RAG:
         return response["message"]["content"]
 
     # Main RAG process
-    def main(self, query):
-        context = self.get_relevant_docs(query)
+    def main(self, query, mock=False):
+        context = self.get_relevant_docs(query, mock=mock)
         messages = self.build_messages(query, context)
 
-        response = self.call_llm(messages)
+        response = self.call_llm(messages, mock=mock)
 
         # Update history
         self.history.append({"role": "user", "content": query})
