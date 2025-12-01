@@ -10,3 +10,10 @@ langchain-community
 faiss-cpu
 langchain-core
 pypdf
+fastapi
+pydantic
+requests
+streamlit
+pytest
+typing
+uvicorn

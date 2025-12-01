@@ -1,4 +1,4 @@
-from rag import RAG
+from Medical_RAG.rag import RAG
 
 if __name__ == "__main__":
     rag = RAG()

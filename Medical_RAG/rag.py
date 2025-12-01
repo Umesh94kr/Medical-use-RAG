@@ -1,4 +1,4 @@
-from vectorstore_data import get_vectorstore
+from Medical_RAG.vectorstore_data import get_vectorstore
 import ollama
 
 
