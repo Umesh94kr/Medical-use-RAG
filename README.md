@@ -56,9 +56,8 @@ Ensure you have Ollama installed and the model downloaded:
 ## **Integrated FastAPI**
 In your terminal go to project directory 
 
-    ```bash
     uvicorn app:app
-    ```
+
 Server starts running, you can copy local server URL, and test it on POSTMAN
 
 <img src="images/server-running.png" width="400">
