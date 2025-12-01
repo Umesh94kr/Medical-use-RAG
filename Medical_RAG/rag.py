@@ -3,7 +3,9 @@ import ollama
 
 
 class RAG:
-    def __init__(self):
+    def __init__(self, mock=False):
+        if mock:
+            pass
         self.vectorstore = get_vectorstore()
         self.history = []
 

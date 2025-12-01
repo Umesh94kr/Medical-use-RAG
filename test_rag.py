@@ -3,6 +3,6 @@ from Medical_RAG.rag import RAG
 
 # keep function names to be test_*
 def test_app():
-    rag = RAG()
+    rag = RAG(mock=True)
     response = rag.main(query="Hey How are you?", mock=True)
     assert response == "You are working correctly!"
