@@ -55,6 +55,7 @@ Ensure you have Ollama installed and the model downloaded:
 
 ## **Integrated FastAPI**
 In your terminal go to project directory 
+
     ```bash
     uvicorn app:app
     ```
